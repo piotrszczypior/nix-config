@@ -34,10 +34,11 @@
     kitty
     discord-ptb
     vscode
-    blender
+    # blender
     spotify
     teams-for-linux
-
+    wget
+    python313
     sops
   ];
 
