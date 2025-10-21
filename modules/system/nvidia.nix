@@ -9,9 +9,9 @@
   # # CUDA support system-wide
   # nixpkgs.config.cudaSupport = true;
   
-  # environment.systemPackages = with pkgs; [
-    # cudaPackages.cudatoolkit
-  # ];
+  environment.systemPackages = with pkgs; [
+    cudaPackages.cudatoolkit
+  ];
 
   hardware.nvidia = {
     modesetting.enable = true;
