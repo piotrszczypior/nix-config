@@ -29,16 +29,19 @@
     # microphone filter 
     easyeffects
 
-    # applications
+    # dev
+    vscode
     git 
+    python313
+    nodejs_24 
+
+    # applications
     kitty
     discord-ptb
-    vscode
     blender 
     spotify
     teams-for-linux
     wget
-    python313
     sops
   ];
 

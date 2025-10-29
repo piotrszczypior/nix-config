@@ -16,6 +16,7 @@
         # programs
         ./programs/git.nix
         ./programs/nano.nix
+        ./programs/npm.nix
         ./programs/python.nix
     ];
 }
