@@ -2,10 +2,7 @@
 {
   programs.bash.shellInit = ''
     mkdir -p ~/.npm-global
-    npm config set prefix '~/.npm-global'
+    export NPM_CONFIG_PREFIX=~/.npm-global
+    export PATH=~/.npm-global/bin:$PATH
   '';
-  
-  environment.sessionVariables = {
-    NPM_CONFIG_PREFIX = "$HOME/.npm-global";
-  };
 }
