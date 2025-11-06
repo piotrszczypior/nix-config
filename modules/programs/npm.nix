@@ -1,6 +1,6 @@
 { config, pkgs, ... }: 
 {
-  programs.bash.shellInit = ''
+  programs.bash.interactiveShellInit = ''
     mkdir -p ~/.npm-global
     export NPM_CONFIG_PREFIX=~/.npm-global
     export PATH=~/.npm-global/bin:$PATH

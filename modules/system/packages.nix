@@ -34,6 +34,13 @@
     git 
     python313
     nodejs_24 
+    docker
+    jdk21_headless
+    gradle_8
+
+    # jetbrains
+    jetbrains.pycharm-professional
+    jetbrains.idea-ultimate
 
     # applications
     kitty
@@ -43,6 +50,8 @@
     teams-for-linux
     wget
     sops
+    tree
+    seahorse
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

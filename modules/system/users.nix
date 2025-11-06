@@ -4,13 +4,9 @@
   users.users.piotrszczypior = {
     isNormalUser = true;
     description = "Piotr Szczypior";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.bash;
-    packages = with pkgs; [
-      jetbrains.idea-ultimate
-      jdk21_headless
-      gradle_8
-    ];
+    packages = with pkgs; [];
   };
 
   # Enable automatic login for the user.
