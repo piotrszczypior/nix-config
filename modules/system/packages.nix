@@ -5,6 +5,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -37,6 +38,7 @@
     docker
     jdk21_headless
     gradle_8
+    code-cursor
 
     # jetbrains
     jetbrains.pycharm-professional
@@ -48,6 +50,7 @@
     blender 
     spotify
     teams-for-linux
+    google-chrome
     wget
     sops
     tree
