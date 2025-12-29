@@ -57,6 +57,8 @@
     seahorse
     zip 
     unzip
+    obsidian
+    pinta
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
