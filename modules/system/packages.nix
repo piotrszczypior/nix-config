@@ -3,6 +3,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Android debug 
+  programs.adb.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -39,6 +42,8 @@
     jdk21_headless
     gradle_8
     code-cursor
+    lua
+    android-studio
 
     # jetbrains
     jetbrains.pycharm-professional
@@ -59,6 +64,7 @@
     unzip
     obsidian
     pinta
+    texlive.combined.scheme-full
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
