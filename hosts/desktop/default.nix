@@ -18,5 +18,8 @@
         ../../modules/programs/nano.nix
         ../../modules/programs/npm.nix
         ../../modules/programs/python.nix
+
+        # aliases
+        ./aliases.nix
     ];
 }
