@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 {
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+  };
+
   users.users.piotrszczypior.extraGroups = [ "docker" ];
 
   virtualisation.virtualbox.host.enable = true;

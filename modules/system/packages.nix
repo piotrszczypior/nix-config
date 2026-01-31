@@ -36,14 +36,18 @@
     # dev
     vscode
     git 
-    python313
+    python312
+    python312Packages.pip
     nodejs_24 
     docker
     jdk21_headless
     gradle_8
-    code-cursor
     lua
     android-studio
+    code-cursor
+    opencode
+    codex
+
 
     # jetbrains
     jetbrains.pycharm-professional
@@ -65,6 +69,13 @@
     obsidian
     pinta
     texlive.combined.scheme-full
+    nix-prefetch
+    xournalpp
+    gimp 
+
+    # File explorers
+    kdePackages.kio
+    nemo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

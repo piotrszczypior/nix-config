@@ -8,6 +8,9 @@
   
   # # CUDA support system-wide
   # nixpkgs.config.cudaSupport = true;
+
+  # GPU inside containers
+  hardware.nvidia-container-toolkit.enable = true;  
   
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
