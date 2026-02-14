@@ -3,7 +3,7 @@
   # Enable NVIDIA drivers
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # # Enable OpenGL
+  # Enable OpenGL
   hardware.graphics.enable = true;
   
   # # CUDA support system-wide

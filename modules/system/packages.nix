@@ -6,6 +6,10 @@
   # Android debug 
   programs.adb.enable = true;
 
+  # app images
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true; # double click
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -15,16 +19,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-
-    # gnome extensions
-    gnome-extension-manager
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.app-icons-taskbar
-    gnomeExtensions.user-themes
-    gnomeExtensions.vitals
-    gnomeExtensions.arc-menu
-    gnomeExtensions.impatience       
-    # gnomeExtensions.dash-to-panel
 
     # boot 
     sbctl 
@@ -72,6 +66,8 @@
     nix-prefetch
     xournalpp
     gimp 
+    notion-app
+    zoom-us
 
     # File explorers
     kdePackages.kio

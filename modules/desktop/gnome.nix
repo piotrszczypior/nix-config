@@ -6,7 +6,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm = {
     enable = true;
-    wayland = false; # temp 
+    wayland = true;
   };
   services.xserver.desktopManager.gnome.enable = true;
 
@@ -20,9 +20,18 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  environment.systemPackages = with pkgs; [
+    gnome-extension-manager
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.app-icons-taskbar
+    gnomeExtensions.user-themes
+    gnomeExtensions.vitals
+    gnomeExtensions.arc-menu
+    gnomeExtensions.impatience       
+    # gnomeExtensions.dash-to-panel
+  ];
 
-  # Enable the Flakes feature 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "piotrszczypior";
 }
