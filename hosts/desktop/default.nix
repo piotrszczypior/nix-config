@@ -13,7 +13,7 @@
         ../../modules/system/virtualisation.nix
 
         # desktop
-        ../../modules/desktop/gnome.nix
+        ../../modules/desktop/i3wm.nix
 
         # programs
         ../../modules/programs/git.nix

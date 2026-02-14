@@ -27,7 +27,8 @@
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
     gnomeExtensions.arc-menu
-    gnomeExtensions.impatience       
+    gnomeExtensions.impatience
+    gnomeExtensions.paperwm       
     # gnomeExtensions.dash-to-panel
   ];
 
