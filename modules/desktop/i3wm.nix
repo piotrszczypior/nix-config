@@ -49,6 +49,9 @@
     xclip
     xdotool
     maim
+
+    feh
+    clipmenu
   ];
 # xsession.windowManager.i3.configFile = ./config;
   # config

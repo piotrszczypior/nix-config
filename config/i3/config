@@ -59,8 +59,15 @@ bindsym Ctrl+$mod+Left workspace prev
 
 #################
 
+# Wallpaper 
+exec_always --no-startup-id feh --bg-fill ~/nix-config/config/i3/wallpaper/wallpaper.jpg
+
 # Screenshots
 bindsym Shift+$mod+S exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'
+
+# Clip menu
+exec --no-startup-id clipmenud
+bindsym $mod+v exec --no-startup-id clipmenu
 
 # New workspace 
 # bindsym Shift+$mod+plus workspace next_on_output
@@ -117,7 +124,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
