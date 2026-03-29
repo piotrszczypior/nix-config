@@ -32,4 +32,14 @@
 
   # Enable the Flakes feature 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  # Automatic store optimization
+  nix.settings.auto-optimise-store = true;
 }

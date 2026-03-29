@@ -10,6 +10,8 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true; # double click
 
+  programs.gpu-screen-recorder.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -23,6 +25,9 @@
     # boot 
     sbctl 
     niv 
+
+    rofi
+    gimp
 
     # microphone filter 
     easyeffects
@@ -41,8 +46,9 @@
     code-cursor
     opencode
     codex
+    comma
 
-
+    jq
     # jetbrains
     jetbrains.pycharm-professional
     jetbrains.idea-ultimate
@@ -61,17 +67,20 @@
     zip 
     unzip
     obsidian
-    pinta
     texlive.combined.scheme-full
     nix-prefetch
-    xournalpp
     gimp 
     notion-app
     zoom-us
 
     # File explorers
     kdePackages.kio
+    xfce.thunar
     nemo
+
+    graphviz
+    mpv
+    gpu-screen-recorder-gtk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
