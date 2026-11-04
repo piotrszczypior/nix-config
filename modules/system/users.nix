@@ -4,7 +4,7 @@
   users.users.piotrszczypior = {
     isNormalUser = true;
     description = "Piotr Szczypior";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.bash;
     packages = with pkgs; [];
   };

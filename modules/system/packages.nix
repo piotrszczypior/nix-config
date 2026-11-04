@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   # Install firefox.
-  programs.firefox.enable = true;
-
-  # Android debug 
-  programs.adb.enable = true;
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox-bin;
+  };
 
   # app images
   programs.appimage.enable = true;
@@ -16,16 +16,40 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
 
+  # direnv
+  programs.direnv.enable = true;
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; lib.mkForce [
+      zlib 
+      zstd
+      stdenv.cc.cc.lib
+      libGL
+      fontconfig
+      libx11
+      libxcb
+      libxext
+      libxrender
+      libxtst
+      libxi
+      libsm
+      glib
+    ];
+  };
+  
+  programs.fuse.userAllowOther = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    wget
+    pulseaudio
 
     # boot 
     sbctl 
     niv 
-
     rofi
     gimp
 
@@ -35,28 +59,23 @@
     # dev
     vscode
     git 
-    python312
-    python312Packages.pip
+    python314
+    python314Packages.pip
     nodejs_24 
     docker
-    jdk21_headless
-    gradle_8
+    openjdk25_headless
+    gradle_9
     lua
     android-studio
     code-cursor
     opencode
     codex
     comma
-
     jq
-    # jetbrains
-    jetbrains.pycharm-professional
-    jetbrains.idea-ultimate
+    jetbrains.idea
 
     # applications
-    kitty
     discord-ptb
-    blender 
     spotify
     teams-for-linux
     google-chrome
@@ -72,15 +91,15 @@
     gimp 
     notion-app
     zoom-us
-
-    # File explorers
-    kdePackages.kio
-    xfce.thunar
+    claude-code
     nemo
-
+    rclone
     graphviz
     mpv
     gpu-screen-recorder-gtk
+    xhost
+    xdotool
+    alttab
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

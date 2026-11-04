@@ -20,6 +20,7 @@
         ../../modules/programs/nano.nix
         ../../modules/programs/npm.nix
         ../../modules/programs/python.nix
+        ../../modules/programs/nemo.nix
 
         # aliases
         ./aliases.nix

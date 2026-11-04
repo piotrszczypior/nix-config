@@ -43,7 +43,7 @@
   services.displayManager.autoLogin.user = "piotrszczypior";
 
   environment.systemPackages = with pkgs; [
-    alacritty
+    ghostty
 
     # screenshots 
     xclip
