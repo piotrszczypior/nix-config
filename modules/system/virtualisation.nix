@@ -12,6 +12,6 @@
   boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 
   services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xhost}/bin/xhost +local:docker
+    ${pkgs.xhost}/bin/xhost +local:docker
   '';
 }

@@ -28,6 +28,10 @@
     [ { device = "/dev/disk/by-uuid/4a495594-f9db-4256-b397-fb50d87f6105"; }
     ];
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true; 
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction

@@ -33,7 +33,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           ./hosts/desktop/default.nix
-          ./google_drive/google-drive-sync.nix
+          # ./google_drive/google-drive-sync.nix
         ];
       };
       laptop = nixpkgs.lib.nixosSystem {
